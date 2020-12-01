@@ -6,9 +6,17 @@ html{
 *::before{
    box-sizing: inherit;
 }
+html,
+body {
+    height: 100%;
+    position: relative;
+    overflow-x: hidden;
+    
+}
 a{
    display: inline-block;
    text-decoration: none;
+   color: inherit;
 }
 ul,
 li{
@@ -16,11 +24,21 @@ li{
    padding: 0;
    list-style: none;
 }
+h1,h2,h3,h4,h5,h6,p{
+   margin: 0;
+   padding: 0;
+}
 
 body{
+   font-family: 'Ubuntu', sans-serif;
+   font-weight: 700;
+   color: #fff;
 
 }
 
 .container{
-   
+   max-width: 1377px;
+   margin: 0 auto;
+   padding: 0 15px;
+   width: 100%;
 }

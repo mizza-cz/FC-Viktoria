@@ -1,11 +1,291 @@
 @import 'vars';
 @import 'global';
 
+// header
+
+.header__inner{
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   height: 120px;
+}
+
+.header__logo{
+   margin-left: 10px;
+   &-link{
+      display: flex;
+      align-items: center;
+   }
+}
+.header__logo-link img{
+   width: 61px;
+   height: 85px;
+   display: block;
+}
+.header__title{
+   margin-left: 34px;
+   color: $accent;
+   font-size: 40px;
+}
+.menu{
+   display: flex;
+   align-items: center;
+}
+.menu__list+.menu__list{
+   margin-left: 62px;
+}
+
+/// main-page
+.main-page{
+   background-color: $accent;
+   padding: 55px 0 48px;
+   min-height: 716px;
+   &__inner{
+      display: flex;
+      justify-content: space-between;
+      position: relative;
+   }
+   &__title{
+      font-size: 60px;
+      line-height: 69px;
+      margin-bottom: 48px;
+   }
+   &__content{
+      max-width: 600px;
+   }
+   &__bg{
+      background-size: cover;
+      background-repeat: no-repeat;
+      width: 868px;
+      height: 780px;
+      position: absolute;
+      right: -160px;
+      top: -25px;
+      z-index: 2;
+   }
+}
+
+
+.main-page__info{
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   
+   &-text{
+      max-width: 409px;
+      font-size: 26px;
+      font-weight: 400;
+      line-height: 34px;
+   }
+   &-link{
+      max-width: 157px;
+      width: 100%;
+      height: 45px;
+      background-color: #009FE3;
+      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+      border-radius: 27px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 19px;
+   }
+}
+
+.main-page__subtitle{
+   line-height: 28px;
+   font-size: 24px;
+   margin:50px 0 30px;
+}
+.main-page__text{
+   font-weight: 400;
+   line-height: 27px;
+   font-size: 19px;
+   margin-bottom: 20px;
+}
+
+.main-page__link{
+   text-decoration: underline;
+   font-size: 20px;
+   font-weight: 400;
+}
+.main-page__gallery{
+   &::after{
+      content: '';
+      position: absolute;
+      background-color: $accent;
+      right: -19px;
+      bottom: -47px;
+      width: 116px;
+      height: 216px;
+      z-index: 3;
+      
+   }
+   &::before{
+      content: '';
+      position: absolute;
+      width: 316px;
+      height: 544px;
+      right: -70px;
+      top: 85px;
+      background-image: url('../images/ball.png');
+   }
+}
+.main-page__sell{
+   position: absolute;
+   left: 0;
+   bottom: 110px;
+   width: 340px;
+   height: 193px;
+   z-index: 3;
+   right: 0;
+   margin: 0 auto;
+   filter: drop-shadow(5px 5px 15px rgba(0, 0, 0, 0.25));
+}
 
 
 
+// advantage
+.advantage{
+   background-color: $accent;
+   padding: 60px 0 88px;
+   &__inner{
+      display: flex;
+      justify-content: space-between;
+   }
+}
+.advantage__title{
+   font-size: 21px;
+   line-height: 24px;
+   margin-bottom: 80px;
+}
+.advantage__item{
+   background-color: #fff;
+   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+   border-radius: 22px;
+   height: 177px;
+   width: 152px;
+   padding: 19px 17px 0 17px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   text-align: center;
+   position: relative;
+ 
+   &::before{
+      content: '';
+      position: absolute;
+      background-color: #009FE3;
+      background-image: url('../images/check.png');
+      background-repeat: no-repeat;
+      background-position: center center;
+      width: 39px;
+      height: 38px;
+      top: 0;
+      left: 0;
+      right: 0;
+      margin: 0 auto;
+      transform: translateY(-50%);
+      border-radius: 10px;
+   }
 
+   &-text{
+      font-weight: 500;
+      color: #333;
+      line-height: 21px;
+      font-size: 18px; 
+      span{
+         font-weight: 700;
+         font-size: 24px;
+         line-height: 28px;
+         display: block;
+      }
+      a{
+         color: #2F80ED;
+         text-decoration: underline;
+      }
+   }
+}
 
+/// infromation
+.information__top{
+   padding: 60px 0;
+   color: #000;
+}
+.information__descr{
+   font-weight: 400;
+   font-size: 17px;
+   line-height: 20px;
+   color: #000;
+   a{
+      color: inherit;
+      text-decoration: underline;
+   }
+}
+.information__list{
+   font-size: 18px;
+   line-height: 26px;
+   margin-bottom: 20px;
+   font-weight: 400;
+   span{
+      color: #F59E00;
+   }
+}
+.information__menu{
+   margin-bottom: 50px;
+   display: flex;
+   justify-content: space-between;
+}
+.information__wrapper{
+   max-width: 761px;
+}
+.information__subtitle{
+   font-size: 20px;
+   margin-bottom: 35px;
+}
+.information__title{
+   font-size: 21px;
+   color: $accent;
+   margin-bottom: 25px;
+}
 
+// information__footer
+.information__footer{
+   height: 158px;
+   display: flex;
+   align-items: center;
+   background-color: $accent;
+   margin-bottom: 100px;
+  
+   
+
+   &-title{
+      position: relative;
+      font-size: 29px;
+      font-weight: 400;
+      span{
+         font-weight: 700;
+      }
+      &::before,
+      &::after{
+         content: '';
+         position: absolute;
+         top: 0;
+         width: 340px;
+         height: 260px;
+         transform: translateY(-50%);
+         background-repeat: no-repeat;
+         background-size: cover;
+         filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+      }
+      &::before{
+         right: 0;
+         background-image: url('../images/karta-mini_2.png');
+      }
+      &::after{
+         right: auto;
+         background-image: url('../images/karta-mini_1.png');
+      }
+   }
+}
 
 @import 'media';
