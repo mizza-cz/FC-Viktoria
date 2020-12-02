@@ -7,7 +7,7 @@
    display: flex;
    justify-content: space-between;
    align-items: center;
-   height: 120px;
+   height: 119px;
 }
 
 .header__logo{
@@ -38,7 +38,7 @@
 /// main-page
 .main-page{
    background-color: $accent;
-   padding: 55px 0 48px;
+   padding: 50px 0px 0px;
    min-height: 716px;
    &__inner{
       display: flex;
@@ -56,13 +56,35 @@
    &__bg{
       background-size: cover;
       background-repeat: no-repeat;
-      width: 868px;
-      height: 780px;
+      width: 558px;
+      height: 735px;
       position: absolute;
-      right: -160px;
-      top: -25px;
-      z-index: 2;
+      margin-right: 97px;
+      right: 0;
+      top: -9px;
    }
+}
+.main-page__gallery{
+   position: relative;
+   width: 100%;
+   &::before{
+      content: '';
+      position: absolute;
+      background-image: url('../images/ball.png');
+      width: 239px;
+      height: 240px;
+      right: -23px;
+      top: 185px;
+   }
+}
+.main-page__sell{
+   position: absolute;
+   left: -6px;
+   z-index: 5;
+   bottom: 125px;
+   width: 160px;
+   height: 150px;
+   filter: drop-shadow(5px 5px 15px rgba(0, 0, 0, 0.25));
 }
 
 
@@ -94,11 +116,11 @@
 .main-page__subtitle{
    line-height: 28px;
    font-size: 24px;
-   margin:50px 0 30px;
+   margin:50px 0 25px;
 }
 .main-page__text{
    font-weight: 400;
-   line-height: 27px;
+   line-height: 28px;
    font-size: 19px;
    margin-bottom: 20px;
 }
@@ -108,39 +130,7 @@
    font-size: 20px;
    font-weight: 400;
 }
-.main-page__gallery{
-   &::after{
-      content: '';
-      position: absolute;
-      background-color: $accent;
-      right: -19px;
-      bottom: -47px;
-      width: 116px;
-      height: 216px;
-      z-index: 3;
-      
-   }
-   &::before{
-      content: '';
-      position: absolute;
-      width: 316px;
-      height: 544px;
-      right: -70px;
-      top: 85px;
-      background-image: url('../images/ball.png');
-   }
-}
-.main-page__sell{
-   position: absolute;
-   left: 0;
-   bottom: 110px;
-   width: 340px;
-   height: 193px;
-   z-index: 3;
-   right: 0;
-   margin: 0 auto;
-   filter: drop-shadow(5px 5px 15px rgba(0, 0, 0, 0.25));
-}
+
 
 
 
@@ -254,7 +244,7 @@
    display: flex;
    align-items: center;
    background-color: $accent;
-   margin-bottom: 100px;
+
   
    
 
@@ -287,5 +277,153 @@
       }
    }
 }
+
+// footer
+.footer{
+   padding: 90px 0 50px;
+   &__inner{
+      display: flex;
+      justify-content: space-between;
+   }
+   &__title{
+      font-size: 19px;
+      color: #000;
+   }
+   &__links{
+      font-weight: 400;
+      a{
+         color: #000;
+         text-decoration: underline;
+         font-size: 19px;
+      }
+      span{
+         color: #E30614;
+      }
+   }
+}
+.footer.footer-main{
+   padding: 115px 0 65px;
+}
+
+// pointer
+.pointer{
+   background-color: $accent;
+   padding-top: 85px;
+   padding-bottom: 20px;
+   min-height: 715px;
+}
+
+
+.pointer__item-2{
+   position: relative;
+   &::before{
+      content: '';
+      position: absolute;
+      right: -26px;
+      height: 654px;
+      width: 524px;
+      bottom: 0;
+      background-image: url('../images/card-2.png');
+      background-repeat: no-repeat;
+      background-size: cover;
+      top: 0;
+      transform: translateY(-52%);
+   }
+}
+.pointer__item-1{
+   position: relative;
+   &::before{
+      content: '';
+      position: absolute;
+      left: -6px;
+      height: 654px;
+      width: 502px;
+      bottom: 0;
+      background-image: url('../images/card-1.png');
+      background-repeat: no-repeat;
+      background-size: cover;
+      top: 0;
+      transform: translateY(-38%);
+   }
+}
+.pointer__select{
+   margin-bottom: 171px;
+   padding: 227px 0 0;
+   position: relative;
+   &::before{
+      content: '';
+      position: absolute;
+      background-image: url('../images/ball.png');
+      max-width: 200px;
+      height: 200px;
+      top: -6px;
+      left: 0;
+      width: 100%;
+      background-size: cover;
+      right: -12px;
+      margin: 0 auto;
+   }
+}
+.pointer__link{
+   color: #000;
+   max-width: 100%;
+   padding: 8px 0;
+   margin: 0 auto;
+   font-size: 19px;
+   line-height: 22px;
+   color: #fff;
+   background-color: #009FE3;
+   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+   border-radius: 57px;
+   position: relative;
+   line-height: 22px;
+   width: 254px;
+   display: flex;
+   justify-content: center;
+   text-align: center;
+   &::before{
+      content: '';
+      position: absolute;
+      z-index: 5;
+      top: 19px;
+      background-image: url('../images/sipka.png');
+      width: 34px;
+      height: 17px;
+      filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.1));
+
+   }
+
+   &--right{
+      &::before{
+         right: -44px;
+         transform: rotate(-180deg);
+      }
+   }
+   &--left{
+      margin-bottom: 33px;
+      &::before{
+         left: -44px;
+      }
+   }
+}
+.back{
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   margin: 0 auto;
+   max-width: 203px;
+   width: 100%;
+   font-weight: 400;
+   font-size: 17px;
+   color: #000;
+   height: 45px;
+   background: #FFFFFF;
+   border: 0.5px solid rgba(0, 0, 0, 0.5);
+   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+   border-radius: 27px;
+   position: relative;
+   z-index: 5;
+}
+
 
 @import 'media';
