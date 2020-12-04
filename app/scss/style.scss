@@ -447,7 +447,7 @@
 .partner{
    width: calc(100%/4);
    padding: 30px 52px 17px 52px;
-   height: 193px;
+   min-height: 193px;
    &.partner--big{
       height: 275px;
    }
