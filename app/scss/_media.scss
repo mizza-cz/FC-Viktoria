@@ -175,7 +175,7 @@
    }
    
    .pointer__item-2::before, .pointer__item-1::before {
-       max-width: 300px;
+       max-width: 323px;
        height: 390px;
        background-size: cover;
    }
@@ -199,6 +199,39 @@
       width: 60px;
       height: 45px;
    }
+}
+@media(max-width: 960px){
+
+   .pointer__select{
+      display: flex;
+      justify-content: space-evenly;
+   }
+   .pointer__item-1,
+   .pointer__item-2{
+      padding-top: 300px;
+      width: 45%;
+   }
+   .pointer__item-2::before, .pointer__item-1::before {
+      max-width: 300px;
+      height: 390px;
+      background-size: contain;
+   }
+   .pointer__item-2::before{
+      transform: translateY(-26%);
+   }
+   .pointer__select{
+      padding-top: 90px;
+      margin-bottom: 50px;
+   }
+   .pointer__select::before{
+      top: 250px;
+      width: 140px;
+      height: 140px;
+   }
+   .pointer__link::before{
+      display: none;
+   }
+
 }
 @media(max-width: 920px){
    .main-page__sell{
@@ -263,37 +296,7 @@
    .footer{
       padding: 50px 0 30px;
    }
-   //// pointer main list
 
-   .pointer__select{
-      display: flex;
-      justify-content: space-evenly;
-   }
-   .pointer__item-1,
-   .pointer__item-2{
-      padding-top: 300px;
-      width: 45%;
-   }
-   .pointer__item-2::before, .pointer__item-1::before {
-      max-width: 300px;
-      height: 390px;
-      background-size: contain;
-   }
-   .pointer__item-2::before{
-      transform: translateY(-26%);
-   }
-   .pointer__select{
-      padding-top: 90px;
-      margin-bottom: 50px;
-   }
-   .pointer__select::before{
-      top: 250px;
-      width: 140px;
-      height: 140px;
-   }
-   .pointer__link::before{
-      display: none;
-   }
 }
 @media(max-width: 770px){
    .pointer__select::before{
@@ -545,6 +548,9 @@
    }
    .pointer__item-2::before, .pointer__item-1::before{
       transform: translateY(8%);
+   }
+   .pointer__item-1::before{
+      left: -7px;
    }
 }
 @media(max-width:320px){
