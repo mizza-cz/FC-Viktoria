@@ -56,35 +56,45 @@
   &__bg {
     background-size: cover;
     background-repeat: no-repeat;
-    width: 558px;
-    height: 735px;
+    width: 868px;
+    height: 780px;
     position: absolute;
     margin-right: 97px;
-    right: 0;
+    right: -250px;
     top: -9px;
   }
 }
 .main-page__gallery {
   position: relative;
   width: 100%;
+  &:after {
+    content: '';
+    position: absolute;
+    width: 116px;
+    height: 189px;
+    right: 39px;
+    bottom: -51px;
+    background-image: url('../images/color-bg.png');
+  }
   &::before {
     content: '';
     position: absolute;
-    background-image: url('../images/ball.png');
-    width: 326px;
-    height: 240px;
+    background-image: url('../images/main-page__ball.png');
+    width: 316px;
+    height: 544px;
     right: -55px;
-    top: 185px;
+    top: 115px;
     background-size: cover;
   }
 }
 .main-page__sell {
   position: absolute;
-  left: -6px;
+  background-size: cover;
+  left: -88px;
   z-index: 5;
-  bottom: 125px;
-  width: 160px;
-  height: 150px;
+  bottom: 91px;
+  width: 340px;
+  height: 193px;
   filter: drop-shadow(5px 5px 15px rgba(0, 0, 0, 0.25));
 }
 
